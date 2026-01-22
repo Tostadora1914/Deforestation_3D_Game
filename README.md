@@ -16,4 +16,4 @@ Por si fuera poco, existen diversos cristales que te permitirán realizar las ac
 
 Tu objetivo será destruir la “Roca Mística” (según lo que te contaron, es una roca gigantesca que,  puede albergar un poder inaudito, obviamente, será excelente para “Iti.Co” y, será un gran hallazgo para tu persona. 
 
-! [](Deforestation_3D_Game/Segundo_Párrafo.png) 
+! [](Segundo_Párrafo.png) 
