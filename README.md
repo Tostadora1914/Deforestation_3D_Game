@@ -15,13 +15,3 @@ Se suponía que tu historia acabaría ahí, sin ninguna posibilidad de sobrevivi
 Por si fuera poco, existen diversos cristales que te permitirán realizar las actividades propuestas por la empresa, asi que, recógelos, explora, e intenta averiguar el porqué te han enviado a ti allí.
 
 Tu objetivo será destruir la “Roca Mística” (según lo que te contaron, es una roca gigantesca que,  puede albergar un poder inaudito, obviamente, será excelente para “Iti.Co” y, será un gran hallazgo para tu persona. 
-
- 
-
-[[url=https://postimg.cc/rDrjL6yg][img]https://i.postimg.cc/rDrjL6yg/Sexto-Parrafo.png[/img][/url]
-](https://postimg.cc/nXD2t8V0)
-![Ocatvo_Párrafo.png](attachment:9a035cf7-d267-46fe-bc07-8711515f2569:Ocatvo_Prrafo.png)
-
-![Sexto_Párrafo.png](attachment:67d2b288-4ff2-4d76-bfd5-93e2e61697c8:Sexto_Prrafo.png)
-
-![Segundo_Párrafo.png](attachment:977664cf-7d4c-41a3-9561-70fee2c34303:Segundo_Prrafo.png)
