@@ -14,5 +14,7 @@ Se suponía que tu historia acabaría ahí, sin ninguna posibilidad de sobrevivi
 
 Por si fuera poco, existen diversos cristales que te permitirán realizar las actividades propuestas por la empresa, asi que, recógelos, explora, e intenta averiguar el porqué te han enviado a ti allí.
 
-Tu objetivo será destruir la “Roca Mística” (según lo que te contaron, es una roca gigantesca que,  puede albergar un poder inaudito, obviamente, será excelente para “Iti.Co” y, será un gran hallazgo para tu persona. 
+Tu objetivo será destruir la “Roca Mística” (según lo que te contaron, es una roca gigantesca que,  puede albergar un poder inaudito, obviamente, será excelente para “Iti.Co” y, será un gran hallazgo para tu persona.
+
+![yeh](https://github.com/Tostadora1914/Deforestation_3D_Game/blob/main/Primer_P%C3%A1rrafo.png?raw=true)
 
