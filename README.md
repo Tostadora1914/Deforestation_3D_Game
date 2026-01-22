@@ -18,7 +18,7 @@ Tu objetivo será destruir la “Roca Mística” (según lo que te contaron, es
 
  
 
-![Primer_Párrafo.png](attachment:ddc07406-c738-40f8-8adc-1cc22442cfbc:Primer_Prrafo.png)
+[url=https://postimg.cc/rDrjL6yg][img]https://i.postimg.cc/rDrjL6yg/Sexto-Parrafo.png[/img][/url]
 
 ![Ocatvo_Párrafo.png](attachment:9a035cf7-d267-46fe-bc07-8711515f2569:Ocatvo_Prrafo.png)
 
