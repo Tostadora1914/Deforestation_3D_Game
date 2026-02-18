@@ -20,8 +20,6 @@ namespace Deforestation.UI
 		{
 			gameObject.SetActive(false);
 		}
-
-
 		#endregion
 
 		#region Public Methods
@@ -34,7 +32,6 @@ namespace Deforestation.UI
 		internal void Hide()
 		{
 			gameObject.SetActive(false);
-
 		}
 		#endregion
 

@@ -17,7 +17,7 @@ namespace Deforestation
 		public MachineMovement MachineMovement => _machineMovement;
 		public Inventory Inventory => _inventory;
 		public InteractionSystem InteractionSystem => _interactionSystem;
-		public TreeTerrainController TerrainController => _terrainController;
+		//public TreeTerrainController TerrainController => _terrainController;
 		public Camera MainCamera;
 		public UIGameController UIGameController => _uiController;
         // Delegate, para acceder al Health System del Player:
@@ -64,8 +64,8 @@ namespace Deforestation
 		[SerializeField] protected UIGameController _uiController;
 		[SerializeField] protected MainMenuInteraction _mainMenuInteraction;
 		[Header("Trees Terrain")]
-		[SerializeField] protected TreeTerrainController _terrainController;
-		[SerializeField] private MachineMovement _machineMovement;
+		//[SerializeField] protected TreeTerrainController _terrainController;
+		[SerializeField] protected MachineMovement _machineMovement;
 
 
         private bool _machineModeOn;
@@ -76,7 +76,10 @@ namespace Deforestation
         void Start()
 		{
             // Desactivar el canvas del "Main Menu" al iniciar la escena:
-            _mainMenuInteraction.gameObject.SetActive(false);
+			if (_mainMenuInteraction != null)
+                _mainMenuInteraction.gameObject.SetActive(false);
+			else
+				return;
             //UI Update
             _playerHealth.OnHealthChanged += _uiController.UpdatePlayerHealth;
 			_machineController.HealthSystem.OnHealthChanged += _uiController.UpdateMachineHealth;
@@ -126,11 +129,12 @@ namespace Deforestation
 		internal void MachineMode(bool machineMode)
 		{
 			MachineModeOn = machineMode;
-			//Player
-			_playerCharacterController.gameObject.SetActive(!machineMode);
-			_playerCharacterController.enabled = !machineMode;
-           
-
+            //Player
+			if (_playerCharacterController != null)
+			{
+				_playerCharacterController.gameObject.SetActive(!machineMode);
+				_playerCharacterController.enabled = !machineMode;
+			}
 
             //Cursor + UI
             if (machineMode)
@@ -161,10 +165,13 @@ namespace Deforestation
             }
 			else
 			{
-				_machineController.enabled = false;
-				_machineController.WeaponController.enabled = false;
-				_machineController.GetComponent<MachineMovement>().enabled = false;
-				_playerCharacterController.transform.parent = null;
+				if (_machineController != null)
+				{
+					_machineController.enabled = false;
+					_machineController.WeaponController.enabled = false;
+					_machineController.GetComponent<MachineMovement>().enabled = false;
+					_playerCharacterController.transform.parent = null;
+				}
 
                 // Si no estas en modo máquina, el panel se desactivará:
                 // Si presionas "º" para salir de la Máquina mientras tienes el "Settings Panel" activo, se desactivará automáticamente:
@@ -177,6 +184,7 @@ namespace Deforestation
            
 				//Camera
 				_virtualCamera.Follow = _playerFollow;
+				//_virtualCamera.Follow = Camera.main.transform;
 				Cursor.lockState = CursorLockMode.Locked;
 			}
 			Cursor.visible = machineMode;

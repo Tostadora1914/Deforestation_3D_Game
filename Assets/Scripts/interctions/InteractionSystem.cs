@@ -2,6 +2,7 @@ using UnityEngine;
 using Deforestation.UI;
 using Deforestation.Recolectables;
 using System;
+using Unity.VisualScripting;
 
 namespace Deforestation.Interaction
 {
@@ -18,10 +19,16 @@ namespace Deforestation.Interaction
 		[SerializeField] Inventory _inventory;
 		private bool _interactebleDetected = false;
 		private IInteractable _currentInteraction;
-		#endregion
 
-		#region Unity Callbacks		
-		private void Update()
+        #endregion
+
+        #region Unity Callbacks		
+
+        private void Start()
+        {
+			
+        }
+        private void Update()
 		{
 			if (_interactebleDetected && Input.GetKeyUp(KeyCode.E))
 			{
@@ -40,21 +47,25 @@ namespace Deforestation.Interaction
 		}
 		void FixedUpdate()
 		{
-			RaycastHit hit;
+            RaycastHit hit;
 			if (Physics.SphereCast(Camera.main.transform.position, 0.5f, Camera.main.transform.forward, out hit, 5))
 			{
 				//print(hit.collider.name); //Para saber que estamos detectando para depurar si alguna deteccion falla.
 				IInteractable interaction = hit.collider.GetComponent<IInteractable>();
 				if (interaction != null)
 				{
+					GameController.Instance.InteractionSystem.OnShowInteraction += GameController.Instance.UIGameController.ShowInteraction;
+					//_interactionSystem.OnShowInteraction += ShowInteraction;
 					InteractableInfo info = interaction.GetInfo();
-					OnShowInteraction.Invoke("E - To " + info.Action + " " + info.Type);
+					//GameController.Instance.UIGameController.ShowInteraction("E - To " + info.Action + " " + info.Type);
+					OnShowInteraction?.Invoke("E - To " + info.Action + " " + info.Type);
 					_interactebleDetected = true;
 					_currentInteraction = interaction;
 					return;
 				}
-			}
+            }
 			_interactebleDetected = false;
+            GameController.Instance.InteractionSystem.OnHideInteraction += GameController.Instance.UIGameController.HideInteraction;
             OnHideInteraction?.Invoke();
 
         }

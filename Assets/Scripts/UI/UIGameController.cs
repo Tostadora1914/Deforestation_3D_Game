@@ -21,8 +21,12 @@ namespace Deforestation.UI
         #endregion
 
         #region Fields
-        private Inventory _inventory => GameController.Instance.Inventory;		
-		private InteractionSystem _interactionSystem => GameController.Instance.InteractionSystem;
+
+		// Antes de suscribirse, preguntará si existe (?):
+        private Inventory _inventory => GameController.Instance?.Inventory;
+
+        // Antes de suscribirse, preguntará si existe (?):
+        private InteractionSystem _interactionSystem => GameController.Instance?.InteractionSystem;
 		 
 
         [Header("Settings")]
@@ -61,6 +65,11 @@ namespace Deforestation.UI
             // Inicialmente, el "Settings Panel" y el "Die Panel" estarán desactivados:
             _settingsPanel.SetActive(false);
 			_diePanel.gameObject.SetActive(false);
+
+            // Si no hau Inventario, no te suscribes a nada:
+            if (_inventory == null)
+                // Sal del método:
+                return;
 
             //My Events
             _inventory.OnInventoryUpdated += UpdateUIInventory;

@@ -12,7 +12,7 @@ namespace Deforestation.Machine.Weapon
 		[SerializeField]
 		private float _maxDamage = 100f;
 
-		private TreeTerrainController _terrainController => GameController.Instance.TerrainController;
+		//private TreeTerrainController _terrainController => GameController.Instance.TerrainController;
 		private void Start()
 		{
 			Explode();
